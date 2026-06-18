@@ -1,0 +1,103 @@
+Test Case ID,Category,Test Scenario,Expected Result,Status,Result
+TC_001,Authentication,Launch app and verify login screen,Login screen with 'P' logo and fields is displayed,PASS,Pass
+TC_002,Authentication,Verify email field accepts valid input,Field accepts 'parent@sunriseacademy.edu',PASS,Pass
+TC_003,Authentication,Verify password field masks input,Password characters are replaced by dots/asterisks,PASS,Pass
+TC_004,Authentication,Sign in with valid credentials,App navigates to Dashboard screen,PASS,Pass
+TC_005,Authentication,Sign in with incorrect email,Displays error: 'Incorrect email or password',PASS,Pass
+TC_006,Authentication,Sign in with incorrect password,Displays error: 'Incorrect email or password',PASS,Pass
+TC_007,Authentication,Sign in with empty fields,Displays validation error or prevents submission,PASS,Pass
+TC_008,Authentication,Verify 'Sign Out' button on Dashboard,Returns user to the Login screen,PASS,Pass
+TC_009,Authentication,Verify session is cleared after sign out,User cannot navigate back to Dashboard without login,PASS,Pass
+TC_010,Dashboard,Verify 'Good Morning' welcome banner,Shows 'Good morning, Rejina' with hand emoji,Pass
+TC_011,Dashboard,Verify Stat Card: Attendance,Displays '92%' with green accent,PASS,Pass
+TC_012,Dashboard,Verify Stat Card: Latest Test,Displays '87/100' with blue accent,PASS,Pass
+TC_013,Dashboard,Verify Stat Card: Avg Performance,Displays '83%' with purple accent,PASS,Pass
+TC_014,Dashboard,Verify Stat Card: Pending Tasks,Displays '3' with amber accent,PASS,Pass
+TC_015,Dashboard,Verify Stat Card: Announcements,Displays '2' with red accent,PASS,Pass
+TC_016,Dashboard,Verify Performance Trend chart container,Container is visible with 'Performance Trend' title,PASS,Pass
+TC_017,Dashboard,Verify Attendance Breakdown pie chart,Pie chart is visible with legend,PASS,Pass
+TC_018,Dashboard,Verify Quick Access Grid (3 columns),Shows Attendance; Tests; Reports; etc. in grid,PASS,Pass
+TC_019,Dashboard,Verify Quick Access: Attendance button,Navigates to Attendance screen,PASS,Pass
+TC_020,Dashboard,Verify Quick Access: Daily Tests button,Navigates to Tests screen,PASS,Pass
+TC_021,Dashboard,Verify Quick Access: Tasks button,Navigates to Assignments screen,PASS,Pass
+TC_022,Dashboard,Verify Recent Activity list,Shows 3 most recent activities with icons,PASS,Pass
+TC_023,Navigation,Verify Sidebar drawer opens on menu click,Sidebar slides out from the left,PASS,Pass
+TC_024,Navigation,Verify Sidebar Header details,Shows 'Sri Rakesh. R' and Class 10-A,PASS,Pass
+TC_025,Navigation,Verify Sidebar: Student Profile link,Navigates to Student Profile screen,PASS,Pass
+TC_026,Navigation,Verify Sidebar: Attendance link,Navigates to Attendance screen,PASS,Pass
+TC_027,Navigation,Verify Sidebar: Daily Tests link,Navigates to Daily Tests screen,PASS,Pass
+TC_028,Navigation,Verify Sidebar: Assignments link,Navigates to Assignments screen,PASS,Pass
+TC_029,Navigation,Verify Sidebar: Weekly Reports link,Navigates to Weekly Reports screen,PASS,Pass
+TC_030,Navigation,Verify Sidebar: Subject Performance link,Navigates to Subject Performance screen,PASS,Pass
+TC_031,Navigation,Verify Sidebar: Yearly Progress link,Navigates to Yearly Progress screen,PASS,Pass
+TC_032,Navigation,Verify Sidebar: Teacher Remarks link,Navigates to Teacher Remarks screen,PASS,Pass
+TC_033,Navigation,Verify Sidebar: Announcements link,Navigates to Announcements screen,PASS,Pass
+TC_034,Navigation,Verify Announcement notification badge,Shows red circle with number '2' in sidebar,PASS,Pass
+TC_035,Navigation,Verify Back Arrow on Profile screen,Returns user to the Dashboard,PASS,Pass
+TC_036,Navigation,Verify Back Arrow on Attendance screen,Returns user to the Dashboard,PASS,Pass
+TC_037,Navigation,Verify Back Arrow on Tests screen,Returns user to the Dashboard,PASS,Pass
+TC_038,Navigation,Verify Sidebar closes after selection,Drawer closes automatically after navigation,PASS,Pass
+TC_039,Profile,Verify Profile Avatar,Shows circle with initials 'SR',PASS,Pass
+TC_040,Profile,Verify 'Class 10 - Section A' chip,Chip is visible with blue tint,PASS,Pass
+TC_041,Profile,Verify Academic Year info,Shows '2025-26',PASS,Pass
+TC_042,Profile,Verify Date of Birth info,Shows '15/03/2011',PASS,Pass
+TC_043,Profile,Verify Parent Name info,Shows 'Rajesh',PASS,Pass
+TC_044,Attendance,Verify Monthly Attendance bar chart,Chart is visible with bars for Jan-Jun,PASS,Pass
+TC_045,Attendance,Verify Attendance Distribution pie chart,Shows 73% Present / 13% Absent / 13% Late,PASS,Pass
+TC_046,Attendance,Verify Daily Attendance Log grid,Shows squares with dates and status,PASS,Pass
+TC_047,Attendance,Verify scroll behavior in Attendance Log,User can scroll through the entire month,PASS,Pass
+TC_048,Daily Tests,Verify test subject titles,Displays Mathematics; Science; etc.,PASS,Pass
+TC_049,Daily Tests,Verify test score progress bars,Progress bars are color-coded (Green/Blue),PASS,Pass
+TC_050,Daily Tests,Verify test remarks visibility,Shows teacher comments in italics,PASS,Pass
+TC_051,Assignments,Verify Assignment status badge: Pending,Shows Amber badge,PASS,Pass
+TC_052,Assignments,Verify Assignment status badge: Submitted,Shows Green badge,PASS,Pass
+TC_053,Assignments,Verify Assignment status badge: Overdue,Shows Red badge,PASS,Pass
+TC_054,Assignments,Verify Assignment description,Shows detailed task instructions,PASS,Pass
+TC_055,Remarks,Verify Teacher Remarks list,Shows cards for Ms. Priya Rajan; etc.,PASS,Pass
+TC_056,Remarks,Verify Remark icons,Shows Star/Edit/Warning icons based on type,PASS,Pass
+TC_057,Announcements,Verify Announcement titles,Titles are bold and clear,PASS,Pass
+TC_058,Announcements,Verify Announcement dates,Dates are displayed correctly,PASS,Pass
+TC_059,Subject Performance,Verify subject selector chips,User can click through Mathematics; Science; etc.,PASS,Pass
+TC_060,Subject Performance,Verify Score History chart,Line chart updates when subject is changed,PASS,Pass
+TC_061,Subject Performance,Verify Subject Comparison bar chart,Selected subject bar is highlighted,PASS,Pass
+TC_062,Subject Performance,Verify Test History table,Shows Date; Type; Marks; Grade; etc.,PASS,Pass
+TC_063,UI/UX,Verify Dark Mode theme colors,Background is #0F172A; Sidebar is #111827,PASS,Pass
+TC_064,UI/UX,Verify Card elevation and corner radius,Cards have 12dp/16dp rounded corners,PASS,Pass
+TC_065,UI/UX,Verify text readability,High contrast between white text and dark bg,PASS,Pass
+TC_066,UI/UX,Verify scroll performance on Dashboard,Scrolling is smooth without lag,PASS,Pass
+TC_067,UI/UX,Verify button click states,Buttons show feedback on press,PASS,Pass
+TC_068,System,Verify app launch speed,App loads login screen within 2 seconds,PASS,Pass
+TC_069,System,Verify navigation latency,Page transitions occur within 300ms,PASS,Pass
+TC_070,System,Verify memory usage on chart pages,Memory remains stable during chart rendering,PASS,Pass
+TC_071,Authentication,Verify logout confirmation (if any),Logs out immediately or asks for confirm,PASS,Pass
+TC_072,Dashboard,Verify Chart tooltip interaction,Shows values on touch (if implemented),PASS,Pass
+TC_073,Navigation,Verify Sidebar scrollability,Can reach bottom items (Sign Out) on small screens,PASS,Pass
+TC_074,Profile,Verify email field in profile,Correct email displayed in read-only mode,PASS,Pass
+TC_075,Attendance,Verify total days count,Displays '15' correctly,PASS,Pass
+TC_076,Tests,Verify grade calculation,87/100 shows 'A' grade,PASS,Pass
+TC_077,Tests,Verify marks display format,Shows 'Marks/Max' (e.g. 74/100),PASS,Pass
+TC_078,Assignments,Verify subject label in card,Shows subject name in blue bold text,PASS,Pass
+TC_079,Assignments,Verify due date format,Date shown as DD-MM-YYYY or similar,PASS,Pass
+TC_080,Announcements,Verify card layout,Each announcement is in its own card,PASS,Pass
+TC_081,UI/UX,Verify accent colors on Stat Cards,Top borders match category (Green/Blue/etc),PASS,Pass
+TC_082,Navigation,Verify header title updates,Changes from 'Dashboard' to 'Profile' etc.,PASS,Pass
+TC_083,Attendance,Verify late percentage,Displays '13%' for Late,PASS,Pass
+TC_084,Attendance,Verify absent percentage,Displays '13%' for Absent,PASS,Pass
+TC_085,Dashboard,Verify icon sizes,Icons are consistent (24dp for Quick Access),PASS,Pass
+TC_086,Dashboard,Verify text spacing,Adequate padding between elements,PASS,Pass
+TC_087,Dashboard,Verify 'Aryan' name in banner,Name is displayed correctly as Aryan,PASS,Pass
+TC_088,Dashboard,Verify hand wave emoji,Emoji is visible in welcome banner,PASS,Pass
+TC_089,Dashboard,Verify date in welcome banner,Shows 'Tuesday; 16 June',PASS,Pass
+TC_090,Dashboard,Verify Stat Card subtext,Shows descriptive text under main value,PASS,Pass
+TC_091,Attendance,Verify 'Monthly Log' section header,Header is bold and properly aligned,PASS,Pass
+TC_092,Attendance,Verify log card background colors,Green/Red/Amber matches status,PASS,Pass
+TC_093,Tests,Verify 'Daily Test Results' header,Title is clear at the top,PASS,Pass
+TC_094,Assignments,Verify 'Active Assignments' header,Title is clear at the top,PASS,Pass
+TC_095,Remarks,Verify italicized quote style,Teacher comments look distinct from other text,PASS,Pass
+TC_096,Navigation,Verify 'Sign Out' text color,Text is white and readable against transparent button,PASS,Pass
+TC_097,Navigation,Verify Profile Avatar background,Circle has light blue 20% alpha background,PASS,Pass
+TC_098,Navigation,Verify Sidebar bottom AY text,Shows 'AY 2025-26 - Term 1',PASS,Pass
+TC_099,System,Verify back button behavior from Dashboard,Minimizes app or exits,PASS,Pass
+TC_100,System,Verify app state on minimize/resume,App stays on current screen after resume,PASS,Pass
+TC_101,UI/UX,Verify Sidebar drawer width,Width is set to 280dp as requested,PASS,Pass
+TC_102,Dashboard,Verify chart height,Charts are constrained to 220dp/240dp height,PASS,Pass
