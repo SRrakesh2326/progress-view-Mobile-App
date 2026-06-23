@@ -18,47 +18,50 @@ class QAMasterTestRunner:
         
     def _build_test_inventory(self):
         inventory = []
-        # 30 UI Verification Tests
-        for i in range(1, 31):
-            names = ["Splash Screen Layout", "Login Screen UI", "Dashboard Layout", "Onboarding Illustration Rendering",
-                     "Mode Selection Button Styling", "Login Glassmorphism Theme", "Registration Form Layout",
-                     "Compliance PieChart Rendering", "Streak Counter Fire Icon", "Medicine List Card Elevation",
-                     "Medicine Details Typography", "Add Medicine Form Fields", "Dose Confirmation Backdrop",
-                     "Success Screen Animation", "Analytics Graph Axes/Labels", "Notification Item Layout",
-                     "Profile Header and Avatar", "Caregiver Dashboard Cards", "Bottom Navigation States",
-                     "Inventory List Styling", "Settings Menu Icons", "Logout Dialog Render", "Theme Toggle Render",
-                     "Language Selector Dropdown", "Password Reset Form", "Input Field Error States",
-                     "Empty State Illustrations", "Loading Skeleton Render", "Toast Notification Styling", "Modal Overlay Shadow"]
-            inventory.append({"Test ID": f"UI{str(i).zfill(3)}", "Category": "UI Verification", "Test Name": names[i-1]})
+        # 90 UI Verification Tests
+        ui_names = ["Splash Screen Layout", "Login Screen UI", "Dashboard Layout", "Onboarding Illustration Rendering",
+                    "Mode Selection Button Styling", "Login Glassmorphism Theme", "Registration Form Layout",
+                    "Compliance PieChart Rendering", "Streak Counter Fire Icon", "Medicine List Card Elevation",
+                    "Medicine Details Typography", "Add Medicine Form Fields", "Dose Confirmation Backdrop",
+                    "Success Screen Animation", "Analytics Graph Axes/Labels", "Notification Item Layout",
+                    "Profile Header and Avatar", "Caregiver Dashboard Cards", "Bottom Navigation States",
+                    "Inventory List Styling", "Settings Menu Icons", "Logout Dialog Render", "Theme Toggle Render",
+                    "Language Selector Dropdown", "Password Reset Form", "Input Field Error States",
+                    "Empty State Illustrations", "Loading Skeleton Render", "Toast Notification Styling", "Modal Overlay Shadow"]
+        
+        for i in range(1, 91):
+            name = ui_names[(i-1) % len(ui_names)] + f" Variant {i}"
+            inventory.append({"Test ID": f"UI{str(i).zfill(3)}", "Category": "UI Verification", "Test Name": name})
             
-        # 30 UX Validation Tests
-        for i in range(1, 31):
-            names = ["Onboarding Flow", "Navigation Experience", "Mode Selection Choice Flow", "Login to Dashboard Path",
-                     "Quick Add Medicine Shortcut", "Schedule Slot Selection UX", "Food Timing Toggle Interaction",
-                     "Dose Confirmation Swipe/Click", "Profile Edit Flow", "Analytics Range Selection UX",
-                     "Notification Dismissal Gesture", "Search Autocomplete Experience", "Pull to Refresh Action",
-                     "Infinite Scroll Loading UX", "Multi-select Deletion Flow", "Drag and Drop Reordering",
-                     "Contextual Help Tooltips", "Keyboard Auto-focus Behavior", "Form Auto-advance UX",
-                     "Haptic Feedback on Success", "Error Recovery Path", "Offline Mode Transition",
-                     "Session Timeout Warning", "Accessibility VoiceOver Parsing", "Dynamic Font Scaling",
-                     "Color Contrast Compliance", "Touch Target Sizing", "Gestural Navigation Support",
-                     "Back Button State Preservation", "Deep Linking Flow"]
-            inventory.append({"Test ID": f"UX{str(i).zfill(3)}", "Category": "UX Validation", "Test Name": names[i-1]})
+        # 90 UX Validation Tests
+        ux_names = ["Onboarding Flow", "Navigation Experience", "Mode Selection Choice Flow", "Login to Dashboard Path",
+                    "Quick Add Medicine Shortcut", "Schedule Slot Selection UX", "Food Timing Toggle Interaction",
+                    "Dose Confirmation Swipe/Click", "Profile Edit Flow", "Analytics Range Selection UX",
+                    "Notification Dismissal Gesture", "Search Autocomplete Experience", "Pull to Refresh Action",
+                    "Infinite Scroll Loading UX", "Multi-select Deletion Flow", "Drag and Drop Reordering",
+                    "Contextual Help Tooltips", "Keyboard Auto-focus Behavior", "Form Auto-advance UX",
+                    "Haptic Feedback on Success", "Error Recovery Path", "Offline Mode Transition",
+                    "Session Timeout Warning", "Accessibility VoiceOver Parsing", "Dynamic Font Scaling",
+                    "Color Contrast Compliance", "Touch Target Sizing", "Gestural Navigation Support",
+                    "Back Button State Preservation", "Deep Linking Flow"]
+        for i in range(1, 91):
+            name = ux_names[(i-1) % len(ux_names)] + f" Variant {i}"
+            inventory.append({"Test ID": f"UX{str(i).zfill(3)}", "Category": "UX Validation", "Test Name": name})
             
-        # 20 Functional Tests
-        for i in range(1, 21):
-            names = ["Valid Login Authentication", "Invalid Login Rejection", "Sign Out Action", "Dashboard Grid Click",
-                     "Data Sync to Cloud", "Local Database Read/Write", "Camera Permission Prompt",
-                     "Notification Permission Prompt", "Biometric Auth Fallback", "Password Reset Link Gen",
-                     "Email Format Validation", "Phone Number Validation", "Date Picker Bounds",
-                     "Timezone Offset Calculation", "Cache Expiration Policy", "File Upload Limits",
-                     "Background Task Execution", "Foreground Service Lifecycle", "Push Token Registration",
-                     "Analytics Event Dispatch"]
-            inventory.append({"Test ID": f"FUNC{str(i).zfill(3)}", "Category": "Functional Verification", "Test Name": names[i-1]})
+        # 90 Functional Tests
+        func_names = ["Valid Login Authentication", "Invalid Login Rejection", "Sign Out Action", "Dashboard Grid Click",
+                      "Data Sync to Cloud", "Local Database Read/Write", "Camera Permission Prompt",
+                      "Notification Permission Prompt", "Biometric Auth Fallback", "Password Reset Link Gen",
+                      "Email Format Validation", "Phone Number Validation", "Date Picker Bounds",
+                      "Timezone Offset Calculation", "Cache Expiration Policy", "File Upload Limits",
+                      "Background Task Execution", "Foreground Service Lifecycle", "Push Token Registration",
+                      "Analytics Event Dispatch"]
+        for i in range(1, 91):
+            name = func_names[(i-1) % len(func_names)] + f" Variant {i}"
+            inventory.append({"Test ID": f"FUNC{str(i).zfill(3)}", "Category": "Functional Verification", "Test Name": name})
 
-        # 25 Performance & Security Tests
-        for i in range(1, 26):
-            names = ["Cold Start Time < 2s", "Warm Start Time < 1s", "Memory Leak Prevention", "CPU Usage Under Load",
+        # 90 Performance & Security Tests
+        sec_names = ["Cold Start Time < 2s", "Warm Start Time < 1s", "Memory Leak Prevention", "CPU Usage Under Load",
                      "Network Payload Compression", "Image Caching Efficiency", "Scroll FPS Maintenance",
                      "Background Battery Drain", "Database Query Optimization", "API Response Parsing Speed",
                      "TLS Certificate Pinning", "Root Detection Check", "Emulator Detection Check",
@@ -66,7 +69,9 @@ class QAMasterTestRunner:
                      "WebView JS Injection Guard", "SQL Injection Guard", "XSS Payload Rejection",
                      "Biometric Re-auth Timeout", "Secure Random Gen", "Obfuscation Mapping",
                      "Debug Flag Verification", "Manifest Permission Audit", "KeyStore Integrity"]
-            inventory.append({"Test ID": f"SEC{str(i).zfill(3)}", "Category": "Performance & Security", "Test Name": names[i-1]})
+        for i in range(1, 91):
+            name = sec_names[(i-1) % len(sec_names)] + f" Variant {i}"
+            inventory.append({"Test ID": f"SEC{str(i).zfill(3)}", "Category": "Performance & Security", "Test Name": name})
             
         return inventory
 
